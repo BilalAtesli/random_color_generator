@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Renk Degistirici</title>
+    <style>
+      .buton {
+        margin: auto;
+        text-align: center;
+        margin-top: 275px;
+      }
+      button {
+        padding: 8px 10px;
+        outline: none;
+        border-radius: 5px;
+        background-color: black;
+        font-size: 16px;
+        border: none;
+        background-color: none;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        transition: all 0.5s ease;
+      }
+      button:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="buton">
+      <button>Renk Değiştir</button>
+    </div>
+    <script>
+      document.querySelector("button").addEventListener("click", function () {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        document.querySelector(
+          "body"
+        ).style.backgroundColor = `rgb(${r},${g},${b})`;
+        document.querySelector("button").style.color = `rgb(${r},${g},${b})`;
+      });
+    </script>
+  </body>
+</html>
